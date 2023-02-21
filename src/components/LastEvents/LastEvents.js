@@ -6,11 +6,12 @@ export default function LastEvents({ LastEventsFetch }) {
     const { loading, result } = LastEventsFetch || {};
 
     if (loading || !result)
-        return (
-            <Dimmer active inverted>
-               {<Loader inverted>Loading...</Loader>}
-            </Dimmer>
-       );
+         return (
+            <div></div>
+    //         <Dimmer active inverted>
+    //            {<Loader inverted>Loading...</Loader>}
+    //         </Dimmer>
+    );
 
     const { results } = result.data;
 
@@ -33,6 +34,8 @@ export default function LastEvents({ LastEventsFetch }) {
             <CardContent>
                 <Button animated as="a" href={event.urls[0].url} target="_blank" color="black">
                     <Button.Content visible>Ver evento</Button.Content>
+                    <Button.Content hidden></Button.Content>
+                    <Icon name="arrow right"/>
                 </Button>
             </CardContent>
         </Card>

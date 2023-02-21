@@ -29,7 +29,7 @@ function App() {
           <Route element={<Error404 />} />
         </Routes>
       </Router>
-      <ListLastEvents></ListLastEvents>
+      {/* <ListLastEvents>  </ListLastEvents> */}
     </div>
   );
 }
